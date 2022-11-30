@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+    header{
+        background-color: grey;
+        text-align: center;
+        padding: 2px;
+
+    }
+    
+    section{
+        display: flex;
+    }
+    nav{
+        flex:1;
+        background-color: yellow;
+    }
+    article{
+        flex:3;
+        background-color: tomato;
+        padding: 2px;
+    }
+    footer{
+        background-color: grey;
+        text-align: center;
+        padding: 6px;
+        
+    }
+    @media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+</style>
+
+</head>
+<body>
+    <h2>css  flex layout</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta unde in dolor quia cum dolores asperiores odit distinctio, vel maiores veritatis ullam obcaecati,
+    
+    eum ea impedit alias? Quas, eveniet aut!
+    </p>
+    <header>Technologies</header>
+    <section>
+        <nav>
+            <ul>
+                <li ><a href="#">c#</a></li>
+                <li ><a href="#">java</a></li>
+                <li><a href="#">ruby</a></li>
+                <li ><a href="#">python</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Java</h1>
+            <p>java is amazing language ,very robus</p>
+            
+        </article>
+       
+    </section>
+    <footer>
+        <p>footer</p>
+    </footer>
+    
+</body>
+</html>

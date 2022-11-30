@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onmousemove="mousemove()">
+    <div >
+        <p id="mousecoord"></p>
+
+    </div>
+    <form>
+        Name: <input type="text" id="name" onfocus="focus()" onblur="blur()">
+    </form>
+    <audio controls oncanplay="canplay()"><source src="source\mixkit-arcade-retro-game-over-213.wav"></audio>
+    <p id="p2"></p>
+    
+        <video controls onerror="errorvid()"><source src="source\mixkit-forest-stream-in-the-sunlight-529-medium.mp4"></video>
+        <p id="p3"></p>
+    
+    <h3 id="hd1" onclick="singleclick()" ondblclick="dbclick()">color change</h3>
+
+    <script>
+         var name = document.getElementById("name");
+        name.addEventListener("focus",focus);
+        name.addEventListener("blur",blur);
+        function focus(){
+            var x=document.getElementById("name");
+            console.log(JSON.stringify(x));
+            x.style.backgroundColor='red';
+
+        }
+        
+        function blur(){
+            document.getElementById("name").style.backgroundColor="blue";
+        }
+        function dbclick(){
+           document.getElementById('hd1').style.color="blue";
+            
+        }
+        function mousemove(){
+            var e = window.event;
+            var x = e.clientX;
+            var y = e.clientY;
+            document.getElementById("mousecoord").innerHTML=`x coordinate: ${x} y coordinate: ${y}`;
+
+        }
+        function singleclick(){
+            document.getElementById('hd1').style.borderStyle="solid";
+        }
+        function canplay(){
+            var x = document.getElementById("p2");
+            x.innerHTML = `click to play`;
+        }
+        function errorvid(){
+            document.getElementById("p3").innerHTML = `some error occured!!`
+        }
+    </script>
+</body>
+</html>
